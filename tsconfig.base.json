@@ -1,0 +1,28 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2022",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@spartan-ng/ui-badge-helm": ["spartan-ui/ui-badge-helm/src/index.ts"],
+      "@spartan-ng/ui-button-helm": ["spartan-ui/ui-button-helm/src/index.ts"],
+      "@spartan-ng/ui-card-helm": ["spartan-ui/ui-card-helm/src/index.ts"],
+      "@spartan-ng/ui-input-helm": ["spartan-ui/ui-input-helm/src/index.ts"],
+      "@spartan-ng/ui-label-helm": ["spartan-ui/ui-label-helm/src/index.ts"],
+      "@spartan-ng/ui-tabs-helm": ["spartan-ui/ui-tabs-helm/src/index.ts"],
+      "@services": ["src/app/services"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

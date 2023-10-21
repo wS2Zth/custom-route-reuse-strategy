@@ -1,0 +1,57 @@
+{
+  "name": "spartan-ui-ui-button-helm",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "spartan-ui/ui-button-helm/src",
+  "prefix": "hlm",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": [
+        "{workspaceRoot}/dist/{projectRoot}"
+      ],
+      "options": {
+        "project": "spartan-ui/ui-button-helm/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "spartan-ui/ui-button-helm/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "spartan-ui/ui-button-helm/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
+      "options": {
+        "jestConfig": "spartan-ui/ui-button-helm/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "spartan-ui/ui-button-helm/**/*.ts",
+          "spartan-ui/ui-button-helm/**/*.html",
+          "spartan-ui/ui-button-helm/package.json"
+        ]
+      }
+    }
+  }
+}
